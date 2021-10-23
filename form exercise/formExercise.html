@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="formExercise.css" />
+    <head>
+    </head>
+    <body>
+        <div class = "container">
+            <h1>Contact Us</h1>
+            <h2>We are very responsive! Feel free to send us a message.</h2>
+            
+            <form class = myForm action="/submit.php">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Alice Lee"><br><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="alice-lee@gmail.com"><br><br>
+                
+                <label for="phone">Phone Number:</label><br>
+                <input type="number" id="phone" name="phone" placeholder="647-678-7890"><br><br>
+                
+                <label for= "message">Message:</label><br>
+                <textarea type="text" id="message" name="message" rows="10" placeholder="i would like to check out the blinds!"></textarea><br><br>
+                
+                <div class=button>
+                    <input type="submit" value="Submit">
+                </div>
+              </form>
+            
+        </div>
+    </body>
+</html>

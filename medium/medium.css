@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap");
+body {
+    overflow: hidden;
+}
+
+.nav {
+  background-color: #2f2e2e;
+}
+
+.nav-item {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 11px;
+  padding-bottom: 12px;
+}
+
+.nav-link {
+  color: white;
+  font-size: 10pt;
+  font-family: Barlow;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+.main {
+  /* Fill the available space */
+  height: 100vh;
+
+  /* Make the children of the element closer to the viewport */
+  perspective: 2px;
+
+  /* Hide the overflow */
+  overflow-x: hidden;
+}
+
+/* General styling, not necessarily related to parallax effect  */
+/* .section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+  } */
+
+.section {
+  position: relative;
+}
+
+.static {
+  height: 100vh;
+}
+
+.logo {
+  margin-top: 50px;
+}
+
+.social-logo {
+    padding: 4px;
+}
+
+.social-logos {
+    margin-bottom: 25px;
+}
+
+.parallax-one {
+  height: 120vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  justify-content:space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.parallax-two {
+  height: 500px;
+}
+
+/* Different background colors for demo purpose */
+.static-one {
+  background-color: #feceab;
+}
+
+.static-two {
+  background-color: #aacfcf;
+}
+
+.static-three {
+  background-color: #c06c84;
+}
+
+.parallax::after {
+  /* Position the pseudo-element to fill the parent */
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Scale the image to full */
+  background-size: cover;
+
+  /* Move the element back then scale the element, it helps to appears more slowly */
+  transform: translateZ(-1px) scale(1.7);
+
+  /* Set the parallax section before the other elements. */
+  z-index: -1;
+}
+
+/* Different background images */
+.parallax-one::after {
+  background-image: url(parallax-1.jpg);
+}
+
+.parallax-two::after {
+  background-image: url(https://source.unsplash.com/P86-JPbDnPY/1600x900);
+}

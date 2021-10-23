@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightblue;
+  width: 100%;
+}
+
+.myForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 95%;
+}
+
+label {
+  width: 95%;
+}
+
+textarea {
+  width: 95%;
+}
+
+.button {
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  color: white;
+  padding: 15px;
+  background: green;
+  border: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+}
