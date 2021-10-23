@@ -1,0 +1,6 @@
+Basically
+Stack / webapi / event queue
+stack gives webapi stuff to do and just moves on with the next thing
+while stack is going webapi runs as well
+if webapi needs to put stuff in the stack it will give it to event queue first
+once stack empties event queue will give stuff to stack and so on.
