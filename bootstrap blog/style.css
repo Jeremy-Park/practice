@@ -122,8 +122,21 @@ button.navbar-toggler {
     padding-bottom: 10px;
 }
 
+
+
+/* footer */
+
 /* why is footer italics normally i will never know it literally stertches the social icons */
 footer i {
   font-style:normal;
   color:rgb(40,40,40);
+}
+
+/* hacky hover pretending to be circle cause i cant figure out how to make the element behind it change */
+.fa:hover{
+  color:royalblue;
+}
+
+footer p {
+  font-size:10pt;
 }
