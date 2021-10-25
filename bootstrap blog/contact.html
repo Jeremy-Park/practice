@@ -60,7 +60,7 @@
     <!-- picture with fixed height -->
     <div
       class="container mw-100 p-0 home-picture"
-      style="background-image: url('./img/about.jpg')"
+      style="background-image: url('./img/contact.jpg')"
     >
       <!-- tint over entire picture -->
       <div
@@ -70,8 +70,8 @@
         <!-- text here -->
         <div class="row w-100 text-center text-white">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <h1 class="home-banner-title">About Me</h1>
-            <span class="home-banner-subtitle">This is what I do.</span>
+            <h1 class="home-banner-title">Contact Me</h1>
+            <span class="home-banner-subtitle">Have questions? I have answers.</span>
           </div>
         </div>
       </div>
@@ -81,22 +81,56 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto my-5">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed
-            quisquam ut perspiciatis, repudiandae nulla animi iste vel,
-            praesentium repellendus molestias aliquid consequatur, earum rem qui
-            error voluptates eius enim consequuntur! 
-            <br><br>
-            Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Ex alias, earum consectetur quia natus
-            ducimus voluptate explicabo, hic porro reprehenderit, quasi? Tenetur
-            ipsum distinctio laboriosam perspiciatis officiis dolore, architecto
-            id.
-            <br><br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam
-            inventore aspernatur repellendus incidunt adipisci modi voluptates
-            recusandae iste eligendi, repudiandae corporis quod aut, optio!
-            Explicabo quaerat unde voluptatem! Itaque, eum!
+            Want to get in touch? Fill out the form below to send me a message
+            and I will get back to you as soon as possible!
           </p>
+          <br />
+
+          <!-- form -->
+          <form>
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="nameInput"
+                placeholder="Name"
+              />
+              <label for="nameInput">Name</label>
+            </div>
+            <hr>
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                placeholder="Email Address"
+              />
+              <label for="emailInput">Email Address</label>
+            </div>
+            <hr>
+            <div class="form-floating">
+              <input
+                type="tel"
+                class="form-control"
+                id="phoneInput"
+                placeholder="Phone Number"
+              />
+              <label for="phoneInput">Phone Number</label>
+            </div>
+            <hr>
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="messageInput"
+                placeholder="Message"
+              />
+              <label for="messageInput">Message</label>
+              <hr>
+            </div>
+
+            <input type="submit" value="SEND" class="btn btn-primary" />
+          </form>
         </div>
       </div>
     </div>
@@ -107,6 +141,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+
   </body>
 
   <footer>

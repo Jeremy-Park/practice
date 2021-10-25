@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Bootstrap</title>
-    <script src="script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,7 +22,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
       <div class="container">
-        <a href="#" class="navbar-brand">Clean Blog</a>
+        <a href="index.html" id="navbar-brand" class="navbar-brand">Clean Blog</a>
 
         <!-- navbar button -->
         <button
@@ -37,26 +36,29 @@
         </button>
 
         <!-- navbar items -->
-        <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto text-uppercase">
+        <div class="collapse navbar-collapse"id="navmenu">
+          <ul class="navbar-nav ms-auto text-uppercase" >
             <li class="nav-item">
-              <a href="index.html" class="nav-link">home</a>
+              <a href="index.html" class="nav-link" id="n0">home</a>
             </li>
             <li class="nav-item">
-              <a href="about.html" class="nav-link">about</a>
+              <a href="about.html" class="nav-link" id="n1">about</a>
             </li>
             <li class="nav-item">
-              <a href="posts.html" class="nav-link">posts</a>
+              <a href="posts.html" class="nav-link" id="n2">posts</a>
             </li>
             <li class="nav-item">
-              <a href="contact.html" class="nav-link">contact</a>
+              <a href="contact.html" class="nav-link" id="n3">contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- picture with fixed height -->
-    <div class="container mw-100 p-0" id="home-picture">
+    <div
+      class="container mw-100 p-0 home-picture"
+      style="background-image: url('./img/home.jpg')"
+    >
       <!-- tint over entire picture -->
       <div
         class="d-flex w-100 h-100 align-items-center justify-content-center"
@@ -65,8 +67,8 @@
         <!-- text here -->
         <div class="row w-100 text-center text-white">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <h1 class="">Clean Blog</h1>
-            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            <h1 class="home-banner-title">Clean Blog</h1>
+            <span class="home-banner-subtitle">A Blog Theme by Start Bootstrap</span>
           </div>
         </div>
       </div>
@@ -204,6 +206,7 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 
   <footer>

@@ -2,18 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 
 @media only screen and (min-width: 992px) {
-    #navbar {
-      transition: top 0.5s; /* Transition effect when sliding down (and up) */
-      background-color: rgba(255, 255, 255, 0.5);
-      position:fixed;
-    }
-  }
+  #navbar {
 
-nav.navbar {
-  background-color: white;
-  position: static;
-  top: 0px;
+
+    transition: all 0.5s ease;
+    transition-property: top, background-color;
+
+    
+    /* transition: top 0.5s; */
+  }
+  #navbar-brand, #n0, #n1, #n2, #n3{
+    transition: all 0.5s ease;
+    transition-property: color;
+  }
 }
+
 
 a.navbar-brand {
   font-family: "Poppins", sans-serif;
@@ -27,29 +30,40 @@ a.nav-link {
   font-size: 12px;
 }
 
-p {
-  font-family: "Lora", serif;
-  font-size: 18px;
-  color: darkgray;
-}
-
-h1 {
+button.navbar-toggler {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-h2 {
+
+
+
+/* main pages */
+.home-picture {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-banner-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 36px;
-  /* color:black; */
+  font-size: 80px;
 }
 
-h3 {
+.home-banner-subtitle {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 24px;
+}
+
+p {
+  font-family: "Lora", serif;
+  font-size: 20px;
+  margin-top: 30px
 }
 
 a:link {
@@ -66,61 +80,147 @@ hr {
   margin-bottom: 36px;
 }
 
-span.subheading {
+a.btn, .btn-primary {
+  background-color: cornflowerblue; /* Green */
+  border: none;
+  border-radius: 0px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-picture {
+    height: 550px;
+  }
+}
+
+
+
+
+
+/* post previews */
+.post-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  /* color:black; */
+}
+
+.post-subtitle {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 24px;
 }
 
-#home-picture {
-  height: 400px;
-  background-image: url("./img/mac.jpg");
+.post-meta {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  color: gray;
+}
+
+
+
+
+
+
+/* post full pages */
+.post-picture {
+  height: 500px;
   background-size: cover;
   background-position: center;
 }
 
+.post-banner-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: left;
+}
+
+.post-banner-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+}
+
+.post-banner-meta {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  color: white;
+  text-align: left;
+}
+
+.section-heading {
+  margin-top: 30px;
+}
+
+.section-quote {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  color: gray;
+  font-style:italic;
+  margin-top: 30px;
+}
+
+.section-picture {
+  font-family: "Lora", serif;
+  font-size: 14px;
+  font-style: italic;
+  color: gray;
+  margin-top: 30px;
+}
+
 @media only screen and (min-width: 768px) {
-    #home-picture {
-        height: 500px;
-      }
+  .post-picture {
+    height: 600px;
   }
 
-a.btn {
-    background-color:cornflowerblue; /* Green */
-    border: none;
-    border-radius: 0px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    text-transform: uppercase;
+  .post-banner-title {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
+    font-size: 60px;
   }
-
-body { 
-    padding-top: 0px;
-    margin:0;
- }
-nav {
-    padding:0px;
-    margin:0px;
-}
-
-#home-picture {
-    padding:0px;
-    margin:0px;
-}
-
-button.navbar-toggler {
+  
+  .post-banner-subtitle {
     font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-size: 12px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-weight: 300;
+    font-size: 24px;
+  }
 }
+
+
+
+
+
+
+/* form */
+.form-control {
+  border: 0;
+  box-shadow: none;
+}
+
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+
+label {
+  font-family: "Lora", serif;
+  font-size: 20px;
+}
+
+
+
+
+
 
 
 
@@ -128,15 +228,17 @@ button.navbar-toggler {
 
 /* why is footer italics normally i will never know it literally stertches the social icons */
 footer i {
-  font-style:normal;
-  color:rgb(40,40,40);
+  font-style: normal;
+  color: rgb(40, 40, 40);
 }
 
-/* hacky hover pretending to be circle cause i cant figure out how to make the element behind it change */
-.fa:hover{
-  color:royalblue;
+/* hover on the stack and it changes the circle's color */
+/* actually genius */
+.fa-stack:hover > .fa-circle {
+  color: royalblue;
 }
 
+/* copyright text */
 footer p {
-  font-size:10pt;
+  font-size: 10pt;
 }
