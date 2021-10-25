@@ -104,10 +104,10 @@ function hider(mq) {
     document.getElementById("navbar").style.top = "0px";
     document.getElementById("navbar").style.position = "static";
     document.getElementById("navbar").style.backgroundColor = "white";
-    document.getElementById("n0").style.color = "black";
-    document.getElementById("n1").style.color = "black";
-    document.getElementById("n2").style.color = "black";
-    document.getElementById("n3").style.color = "black";
+    document.getElementById("n0").style.color = "gray";
+    document.getElementById("n1").style.color = "gray";
+    document.getElementById("n2").style.color = "gray";
+    document.getElementById("n3").style.color = "gray";
 
 
 
