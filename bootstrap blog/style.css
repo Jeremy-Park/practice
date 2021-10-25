@@ -3,20 +3,20 @@
 
 @media only screen and (min-width: 992px) {
   #navbar {
-
-
     transition: all 0.5s ease;
     transition-property: top, background-color;
 
-    
     /* transition: top 0.5s; */
   }
-  #navbar-brand, #n0, #n1, #n2, #n3{
+  #navbar-brand,
+  #n0,
+  #n1,
+  #n2,
+  #n3 {
     transition: all 0.5s ease;
     transition-property: color;
   }
 }
-
 
 a.navbar-brand {
   font-family: "Poppins", sans-serif;
@@ -37,9 +37,6 @@ button.navbar-toggler {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
-
 
 /* main pages */
 .home-picture {
@@ -63,11 +60,15 @@ button.navbar-toggler {
 p {
   font-family: "Lora", serif;
   font-size: 20px;
-  margin-top: 30px
+  margin-top: 30px;
 }
 
 a:link {
   text-decoration: none;
+  color: black;
+}
+
+a:visited {
   color: black;
 }
 
@@ -80,7 +81,8 @@ hr {
   margin-bottom: 36px;
 }
 
-a.btn, .btn-primary {
+a.btn,
+.btn-primary {
   background-color: cornflowerblue; /* Green */
   border: none;
   border-radius: 0px;
@@ -101,10 +103,6 @@ a.btn, .btn-primary {
   }
 }
 
-
-
-
-
 /* post previews */
 .post-title {
   font-family: "Poppins", sans-serif;
@@ -124,10 +122,6 @@ a.btn, .btn-primary {
   font-size: 18px;
   color: gray;
 }
-
-
-
-
 
 
 /* post full pages */
@@ -166,7 +160,7 @@ a.btn, .btn-primary {
   font-family: "Lora", serif;
   font-size: 18px;
   color: gray;
-  font-style:italic;
+  font-style: italic;
   margin-top: 30px;
 }
 
@@ -188,18 +182,13 @@ a.btn, .btn-primary {
     font-weight: 700;
     font-size: 60px;
   }
-  
+
   .post-banner-subtitle {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 24px;
   }
 }
-
-
-
-
-
 
 /* form */
 .form-control {
@@ -216,13 +205,6 @@ label {
   font-family: "Lora", serif;
   font-size: 20px;
 }
-
-
-
-
-
-
-
 
 /* footer */
 
