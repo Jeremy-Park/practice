@@ -1,0 +1,20 @@
+body {
+  background: linear-gradient(to right, #ff0db6, #ff3030);
+}
+
+.btn-login {
+  font-size: 14px;
+  padding: 12px;
+}
+
+.btn-google {
+  background-color: red;
+}
+
+.btn-facebook {
+  background-color: slateblue;
+}
+
+.btn {
+  color: white;
+}

@@ -1,0 +1,51 @@
+Making react app
+    npx create-react-app my-app-name
+
+Oddities
+    need to use jsx?
+    class = className, for=htmlFor etc
+    learn emmet abbreviations
+    https://www.codecademy.com/learn/react-101/modules/react-101-jsx-u/cheatsheet
+
+function
+    returns only one element
+    any js should be above return statement
+    can be a not div for return element. can be blank which disappears in the structure
+
+js 
+    do js above return
+    below return js is in {}
+    can do variables
+    rafce is good shortcut
+
+rafce
+    arrow function shortcut
+    use this alot
+    has import at the top but its not needed but i can just leave it
+    
+
+importing smaller components into big boys
+    import MyComponent from './components/MyComponent'
+
+    rafce
+        return
+            div
+                <MyComponent />
+            div
+
+When importing components you can pass in stuff
+    in parent
+        <MyComponent title='hello'>
+
+    in MyComponent
+        const MyComponent = (props) => {
+            return(
+                <header>
+                    <h1>{props.title}</h1>
+                </header>
+            )
+        }
+    
+    MyComponent.defaultProps = {
+        title:'default title here'
+    }
