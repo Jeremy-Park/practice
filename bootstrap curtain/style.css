@@ -8,9 +8,9 @@ a.nav-link {
 }
 
 /* nice scroll apparently */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 
 
@@ -124,15 +124,69 @@ html {
 
 
 /* amazon */
-.amazon_image {
-  width: 300px;
-  height: 300px;
-  background-size:auto;
-  background-repeat: no-repeat;
+.amazon_item{
+  display:flex;
+  flex-direction: column;
+  background-color: rosybrown;
+  justify-content: space-between;
 }
 
 
+.amazon_image {
+  width: 250px;
+  height: 250px;
+  background-color:white;
+  background-position: center;
+  background-size:contain;
+  background-repeat: no-repeat;
+}
 
+.amazon_description {
+  width:250px;
+  height:250px;
+  display:flex;
+  flex-direction: column;
+  background-color: rosybrown;
+  justify-content: space-around;
+  padding: 20px;
+  text-align: center;
+}
+
+.amazon_item_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.amazon_image:hover .overlay {
+  height: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 /* text */
 h3 {
