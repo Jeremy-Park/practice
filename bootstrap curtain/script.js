@@ -146,9 +146,15 @@ const itemPrices = [
 
 // sample loop
 for (let i = 0; i < itemImages.length; i++) {
-  // item < image, desc
+  // item < amazonImageWrapper
   var amazonItem = document.createElement("div");
   amazonItem.classList.add("amazon_item");
+
+  // amazonImageWrapper < image, overlay
+  var amazonImageWrapper = document.createElement("div");
+  amazonImageWrapper.classList.add("amazon_image_wrapper");
+
+  amazonItem.appendChild(amazonImageWrapper);
 
   // image
   var amazonImage = document.createElement("div");
@@ -159,7 +165,28 @@ for (let i = 0; i < itemImages.length; i++) {
     `window.open('${itemLinks[i]}', '_blank').focus();`
   );
 
-  amazonItem.appendChild(amazonImage);
+  amazonImageWrapper.appendChild(amazonImage);
+
+
+  // only do overlay if prices
+  if (itemPrices[i] != "View price on Amazon") {
+  // overlay < overlayText
+  var amazonOverlay = document.createElement("div");
+  amazonOverlay.classList.add("amazon_overlay");
+
+  amazonImageWrapper.appendChild(amazonOverlay);
+
+  // overlay text
+  var amazonOverlayText = document.createElement("h5");
+  amazonOverlayText.classList.add("amazon_overlay_text");
+
+  var amazonOverlayTextText = document.createTextNode("AVAILABLE IN MORE OPTIONS");
+  amazonOverlayText.appendChild(amazonOverlayTextText);
+
+  amazonOverlay.appendChild(amazonOverlayText);
+  }
+
+
 
   // description < name, pricerow, button
   var amazonDesc = document.createElement("div");
