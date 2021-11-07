@@ -1,0 +1,15 @@
+.player_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1000px;
+    align-items: center;
+    justify-content: center;
+}
+
+.lobby {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}

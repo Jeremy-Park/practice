@@ -49,3 +49,14 @@ When importing components you can pass in stuff
     MyComponent.defaultProps = {
         title:'default title here'
     }
+
+
+
+
+
+
+game lobby
+    use context api
+    use routes when creating page
+    dont keep stuff in app.js
+    
