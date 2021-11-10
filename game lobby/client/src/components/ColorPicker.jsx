@@ -1,10 +1,21 @@
 import Select from "@mui/material/Select";
 import FormControl from "@mui/material/Select";
 
-import React from "react";
+import React, { useContext } from "react";
 import { InputLabel } from "@mui/material";
 import { MenuItem } from "@mui/material";
-const ColorPicker = ({ color, setColor, colorArray, setColorArray }) => {
+import { ColorArrayContext } from "../contexts/ColorArrayContext";
+import { ColorContext } from "../contexts/ColorContext";
+
+const ColorPicker = () => {
+  // using context now ColorContext
+  // const ColorPicker = ({ color, setColor, colorArray, setColorArray }) => {
+
+  const { colorArray } = useContext(ColorArrayContext);
+  const { setColorArray } = useContext(ColorArrayContext);
+  const { color } = useContext(ColorContext);
+  const { setColor } = useContext(ColorContext);
+
   function handleChange(event) {
     // Here, we invoke the callback with the new value
 
