@@ -1,0 +1,27 @@
+#sign-up-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sign-up-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding: 48px;
+}
+
+#sign-up-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sign-up-button {
+    margin-top: 48px;
+}
