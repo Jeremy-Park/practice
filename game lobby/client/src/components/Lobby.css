@@ -13,3 +13,25 @@
     flex-wrap: wrap;
     align-items: center;
 }
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    width: 100%;
+}
+
+.signupButton {
+    margin: 20px !important;
+}
+
+.userInfo {
+    background-color: lightcyan;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
