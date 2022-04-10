@@ -1,22 +1,25 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState } from 'react'
 
-export const MyContext = createContext();
+export const MyContext = createContext()
 
 const MyContextProvider = (props) => {
-
-  const [selectedColors, setSelectedColors] = useState(["white","white","white","white",]);
-  const [disabledColors, setDisabledColors] = useState([]);
+  const [selectedColors, setSelectedColors] = useState([
+    'white',
+    'white',
+    'white',
+    'white',
+  ])
 
   return (
     <MyContext.Provider
       value={{
-        selectedColors: [selectedColors, setSelectedColors],
-        disabledColors: [disabledColors, setDisabledColors],
+        selectedColors,
+        setSelectedColors,
       }}
     >
       {props.children}
     </MyContext.Provider>
-  );
-};
+  )
+}
 
-export default MyContextProvider;
+export default MyContextProvider

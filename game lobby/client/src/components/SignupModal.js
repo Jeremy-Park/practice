@@ -1,45 +1,30 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react'
 
-import styles from "./SignupModal.module.css";
-import { Modal, Button, Typography, TextField } from "@material-ui/core";
-import { Box } from "@mui/system";
-import { auth } from "../firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import styles from './SignupModal.module.css'
+import { Modal, Button, Typography, TextField } from '@material-ui/core'
+import { Box } from '@mui/system'
+import { signup } from '../constants/constants'
 
 const SignupModal = ({ openSignup, handleCloseSignup, handleSignin }) => {
-
   // ref from form
-  const emailRef = useRef();
-  const passwordRef = useRef();
+  const emailRef = useRef()
+  const passwordRef = useRef()
 
   const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-  };
+  }
 
-  function handleSignup() {
-    createUserWithEmailAndPassword(
-      auth,
-      emailRef.current.value,
-      passwordRef.current.value
-    )
-      .then((userCredential) => {
-        handleSignin();
-        handleCloseSignup();
-        // ...
-      })
-      .catch((error) => {
-        // Spit out error messages so that I know
-        alert(error.message);
-        // ..
-      });
+  // function to handle signup
+  const handleSignup = async () => {
+    signup(emailRef.current.value, passwordRef.current.value)
   }
 
   return (
@@ -60,7 +45,7 @@ const SignupModal = ({ openSignup, handleCloseSignup, handleSignin }) => {
             className={styles.form}
             component="form"
             sx={{
-              "& > :not(style)": { m: 1 },
+              '& > :not(style)': { m: 1 },
             }}
             noValidate
             autoComplete="off"
@@ -91,7 +76,7 @@ const SignupModal = ({ openSignup, handleCloseSignup, handleSignin }) => {
         </Box>
       </Modal>
     </div>
-  );
-};
+  )
+}
 
-export default SignupModal;
+export default SignupModal

@@ -3,8 +3,6 @@ import React, { useRef } from "react";
 import styles from "./SigninModal.module.css";
 import { Modal, Button, Typography, TextField } from "@material-ui/core";
 import { Box } from "@mui/system";
-import { auth } from "../firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
 
 const SigninModal = ({ openSignin, handleCloseSignin, handleSignin }) => {
 
@@ -25,17 +23,7 @@ const SigninModal = ({ openSignin, handleCloseSignin, handleSignin }) => {
   };
 
   function handleSigninModal() {
-    signInWithEmailAndPassword(
-      auth,
-      emailRef.current.value,
-      passwordRef.current.value
-    )
-      .then((userCredential) => {
-        handleSignin();
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
+    console.log("sign in ")
   }
 
   return (
