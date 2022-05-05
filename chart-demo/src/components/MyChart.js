@@ -38,7 +38,7 @@ const MyChart = () => {
       {
         data: rawData.week.map((a) => a.price),
         fill: true,
-        pointBackgroundColor: 'rgba(33, 150, 243, 1)',
+        pointBackgroundColor: 'rgba(33, 150, 243, 0)',
         pointBorderColor: 'rgba(33, 150, 243, 0)',
         borderColor: 'rgba(33, 150, 243, 1)',
         lineTension: 0.2,
@@ -65,9 +65,9 @@ const MyChart = () => {
         display: false,
       },
       tooltip: {
-        backgroundColor: 'transparent',
-        bodyColor: '#666',
-        titleColor: '#666',
+        backgroundColor: 'rgba(33, 150, 243, 0.8)',
+        bodyColor: '#fff',
+        titleColor: '#fff',
         displayColors: false,
       },
     },
