@@ -8,7 +8,8 @@ import SignupModal from './SignupModal'
 import SigninModal from './SigninModal'
 
 const Lobby = () => {
-  const { selectedColors, setSelectedColors } = useContext(MyContext)
+  const { selectedColors, setSelectedColors, userData, setUserData } =
+    useContext(MyContext)
   const [emailState, setEmailState] = useState('Guest')
 
   const [openSignup, setOpenSignup] = useState(false)
@@ -19,25 +20,11 @@ const Lobby = () => {
   const handleOpenSignin = () => setOpenSignin(true)
   const handleCloseSignin = () => setOpenSignin(false)
 
-  const [signinState, setSigninState] = useState(false)
-  const [signupState, setSignupState] = useState(false)
-  const [signoutState, setSignoutState] = useState(true)
-
-  function getUserData() {
-    console.log('get user data')
-  }
-
-  function setUserData() {
-    console.log('set user data')
-  }
-
-  const handleSignin = () => {
-    console.log('handle sign in')
-  }
-
   // signout
   const handleSignout = () => {
-    console.log('handle sign out')
+    setUserData(null)
+    setSelectedColors(['white', 'white', 'white', 'white'])
+    console.log("handle sign out")
   }
 
   return (
@@ -45,33 +32,31 @@ const Lobby = () => {
       <SignupModal
         openSignup={openSignup}
         handleCloseSignup={handleCloseSignup}
-        handleSignin={handleSignin}
       />
       <SigninModal
         openSignin={openSignin}
         handleCloseSignin={handleCloseSignin}
-        handleSignin={handleSignin}
       />
 
       <div className="buttonGroup">
         <Button
           className="signinButton"
           onClick={handleOpenSignin}
-          disabled={signinState}
+          disabled={userData !== null}
         >
           Sign In
         </Button>
         <Button
           className="signupButton"
           onClick={handleOpenSignup}
-          disabled={signupState}
+          disabled={userData !== null}
         >
           Sign Up
         </Button>
         <Button
           className="signoutButton"
           onClick={handleSignout}
-          disabled={signoutState}
+          disabled={userData === null}
         >
           Sign Out
         </Button>

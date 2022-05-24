@@ -1,11 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 
 import styles from './SignupModal.module.css'
 import { Modal, Button, Typography, TextField } from '@material-ui/core'
 import { Box } from '@mui/system'
 import { signup } from '../constants/constants'
+import { MyContext } from '../contexts/MyContext'
 
-const SignupModal = ({ openSignup, handleCloseSignup, handleSignin }) => {
+const SignupModal = ({ openSignup, handleCloseSignup }) => {
+  // context
+  const { selectedColors, setSelectedColors, userData, setUserData } =
+    useContext(MyContext)
+
   // ref from form
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -24,7 +29,23 @@ const SignupModal = ({ openSignup, handleCloseSignup, handleSignin }) => {
 
   // function to handle signup
   const handleSignup = async () => {
-    signup(emailRef.current.value, passwordRef.current.value)
+    const email = emailRef.current.value
+    const password = passwordRef.current.value
+    if (!email || !password || email.length === 0 || password.length === 0) {
+      alert('invalid input')
+    }
+
+    const response = await signup(
+      emailRef.current.value,
+      passwordRef.current.value
+    )
+
+    if (response !== null) {
+      setUserData(response)
+      alert('signed up and signed in')
+    } else {
+      alert('invalid input / user already exists')
+    }
   }
 
   return (
